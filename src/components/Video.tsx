@@ -17,9 +17,7 @@ export function Video(props: videoProps){
 
     if(!data || !data.lesson) {
         return(
-            <div className="flex-1">
-                <p>Carregando...</p>
-            </div>
+            <div className="flex-1"></div>
         )
     }
 
