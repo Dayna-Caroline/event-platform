@@ -1,8 +1,8 @@
-import { gql, useMutation } from '@apollo/client';
 import { useState, FormEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Logo } from '../components/Logo'
 import { useCreateSubscriberMutation } from '../graphql/generated';
+import code_mockup from "../assets/code-mockup.png"
 
 export function Subscribe() {
     const navigate = useNavigate()
@@ -26,7 +26,7 @@ export function Subscribe() {
     }
 
     return (
-        <div className="min-h-screen bg-blur bg-no-repeat flex flex-col items-center">
+        <div className="min-h-screen bg-blur bg-cover bg-no-repeat flex flex-col items-center">
             <div className="w-full max-w-[1100px] flex justify-between items-center mt-20 mx-auto">
                 <div className="max-w-[640px]">
                     <Logo />
@@ -44,8 +44,8 @@ export function Subscribe() {
                     <strong className='text-2xl mb-6 block'>Inscreva-se gratuitamente</strong>
 
                     <form onSubmit={handleSubscribe} className='flex flex-col gap-2 w-full'>
-                        <input className='bg-gray-900 rounded px-5 h-14' type="text" placeholder="Seu nome completo" onChange={event => setName(event.target.value)} />
-                        <input className='bg-gray-900 rounded px-5 h-14' type="email" placeholder="Digite seu e-mail" onChange={event => setEmail(event.target.value)} />
+                        <input className='bg-gray-900 rounded px-5 h-14 outline-none focus:border border-green-300 outline-1' type="text" placeholder="Seu nome completo" onChange={event => setName(event.target.value)} />
+                        <input className='bg-gray-900 rounded px-5 h-14 outline-none focus:border border-green-300 outline-1' type="email" placeholder="Digite seu e-mail" onChange={event => setEmail(event.target.value)} />
 
                         <button type="submit" disabled={loading} className='mt-4 bg-green-500 uppercase py-4 rounded font-bold text-sm hover:bg-green-700 transition-colors disabled:opacity-50'>
                             Garantir minha vaga
@@ -54,7 +54,7 @@ export function Subscribe() {
                 </div>
             </div>
 
-            <img src="/src/assets/code-mockup.png" className="mt-10" alt="" />
+            <img src={code_mockup} className="lg:px-1.5" alt="" />
         </div>
     );
 }
