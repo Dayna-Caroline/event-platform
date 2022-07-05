@@ -4,9 +4,9 @@
 
 * Projeto: https://event-platform-gamma-five.vercel.app/
 
-<div align="center">
-    <img width="600px" src="./assets/screenshot-subscribe.png" alt="Subscribe page"/>
-    <img width="600px" src="./assets/screenshot-event.png" alt="Event page"/>
+<div align="center" display="flex">
+    <img width="450px" src="src/assets/screenshot-subscribe.png" alt="Subscribe page"/>
+    <img width="450px" src="src/assets/screenshot_event.png" alt="Event page"/>
 </div>
 
 ## 📌 Tecnologias
@@ -22,10 +22,10 @@
 
 ```
 # Clone o repositório
-git clone git@github.com:rafael-santana-almeida/ignite_lab-event_platform.git
+git clone git@github.com:Dayna-Caroline/event-platform.git
 
 # Acesse a pasta do projeto
-cd ignite_lab-event_platform
+cd event-platform
 
 # Instale as dependências
 npm i
